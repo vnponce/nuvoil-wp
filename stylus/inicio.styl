@@ -1,0 +1,1196 @@
+@import "nib"
+@import "normalize.styl"
+
+gris-oscuro = #333333
+rojo-claro = #EA5351
+blanco = #fff
+gris-claro = #666666
+rojo-transparente = rgba(221,0,49,0.7)
+gris-medio = #3C3C3B
+gris-clarito = #E6E6E6
+
+.rojo
+	color rojo-claro !important
+*
+	margin 0
+	padding 0
+h2,h3
+	font-size 21px 
+	line-height 23px
+	font-weight 400
+h2,h3,article,section 
+	margin 0px
+	padding 0px
+ul
+	margin 0
+	padding 0
+figure
+	margin 0 
+	padding 0
+	font-size 0px 
+p 
+	font-size 1rem
+	line-height 1.5rem
+	font-weight 400
+	color gris-claro
+strong
+	font-weight 700
+	
+body,html
+	width 100%
+	font-family 'Roboto', sans-serif
+	font-size 14px
+
+/********************** ABRE CABECERA ***********************/
+
+/*** LINEA NEGRA ***/
+header
+	width 100%
+.cabecera-principal
+	position fixed
+	z-index 10000
+	transition all .5s ease-out
+.barra-negra
+	width 100%
+	height 60px
+	background gris-oscuro
+.wrapt
+	width 90%
+	height 100%
+	min-width 280px
+	max-width 970px
+	margin 0 auto
+	font-size 0
+	position relative
+.barra-negra section
+	display inline-block
+	height 100%
+.idioma
+	width 20%
+	height 100%
+	vertical-align top
+	text-transform uppercase
+	z-index 1000
+	position relative
+.lenguaje
+	width 40px
+	font-size 1rem
+	color blanco
+	line-height 60px
+	div
+		display inline-block
+.triangulito-lenguaje
+	width 0
+	height 0
+	border-style solid
+	border-width 5px 5px 0 5px
+	border-color blanco transparent transparent transparent;
+	float right
+	margin-top 28px
+.seleccion-lenguaje
+	margin-top -40px
+	position absolute
+	background blanco
+	width 0px
+	height 2px
+	font-size .9rem
+	list-style none
+	border-radius 5px
+	overflow hidden
+	box-shadow 0px 0px 17px -2px rgba(0,0,0,0.25)
+	transition width .2s ease-out, height .2s ease-out
+	li 
+		width 80%
+		margin 0 auto
+		color gris-claro
+		height 30px
+		line-height 30px
+		&:first-child
+			border-bottom 1px solid gris-claro
+.idioma-activo
+	width 80px !important
+	height 60px !important
+ 
+.bolsa-blog
+	width 60%
+	height 100%
+	vertical-align top
+.bolsa-blog ul
+	width 100%
+	font-size 1rem
+	text-align right
+	li
+		list-style none
+		display inline-block
+		line-height 60px
+	a 
+		text-decoration none
+		color blanco
+.contacto
+	width 20%
+	position relative
+	text-align right
+.contacto div
+	width 50px
+	height 100%
+	display inline-block
+	background rojo-claro
+	margin-right -30%
+	img
+		width 20px
+		height auto
+		margin-right 15px
+		margin-top 15px
+
+/*** LINEA BLANCA ***/
+
+.barra-blanca
+	width 100%
+	height 80px
+	font-size 0
+	background blanco
+	position relative
+	box-shadow 0px 2px 6px -2px rgba(0,0,0,0.25)
+.cont-logo
+	width 80%
+	height 65px
+	padding-top 15px
+	display inline-block
+	vertical-align top
+	position absolute
+	z-indez 100
+	figure
+		height 50px
+	img
+		width auto
+		height 100%
+.social
+	display none
+.menu-icono
+	width 35px
+	position absolute
+	right 8px
+	top 22px
+	display inline-block
+	span
+		width 100%
+		display block
+		height 18px
+		margin-bottom 5px
+		background url("../img/menu.svg") no-repeat center
+	div
+		text-align center
+		font-size .9rem
+		font-weight 300
+		text-transform uppercase
+nav
+	width 0
+	height 0
+	position absolute
+	z-index 1000
+	right 0
+	display inline-block
+	vertical-align top
+	box-shadow 0px 2px 6px -2px rgba(0,0,0,0.25)
+	border-radius 5px
+	background blanco
+	margin-top 15px
+	overflow hidden
+	transition width .2s ease-out, height .4s ease-out
+	text-transform uppercase
+	ul 
+		width 80%
+		margin 0 auto
+		text-align center
+		li 
+			list-style none
+			width 100%
+			a
+				text-decoration none
+				color gris-claro
+				p
+					width 100%
+					height 50px
+					line-height 50px
+					font-size 1rem
+.nav-activo
+	width 100%
+	height 300px
+.bloque
+	width 100%
+	height 140px
+
+
+
+/********************** SLIDER ***********************/
+#slider 
+	width 100%
+	top 140px
+	
+
+.flechas
+	position absolute
+	height 50px
+	margin-left 5%
+	margin-right 5%
+	z-index 1000
+	top 250px		
+.flecha
+	width 40px
+	height 40px
+.flecha-der
+	float right
+	background url("../img/flecha.svg") no-repeat center
+	border-left 1px solid blanco
+.flecha-izq
+	float left
+	background url("../img/flecha-izq.svg") no-repeat center
+	border-right 1px solid blanco
+	
+
+.elemento-slide 
+	width 100%
+	.texto-noticia
+		width 100%
+		margin-top -100px
+		position relative
+		z-index 999
+	img
+		width 100%
+		height 200px
+	header 
+		margin 0
+		background rojo-transparente
+		text-align center
+		height 85px
+		padding-top 15px
+	
+
+
+.elemento-slide  h2
+	width 60%
+	color blanco
+.flecha, .elemento-slide  h2
+	display inline-block
+	vertical-align top
+	
+.descriptivo
+	width 90%
+	margin 0 auto
+	margin-top -30px
+	text-align center
+	padding 20px 0px
+	background gris-medio
+	color blanco
+.descriptivo h3
+	width 80%
+	margin 0 auto
+	font-size 1rem
+
+.rayita-horizontal
+	height 1px 
+	width 80%
+	background blanco
+	margin 10px auto
+.descriptivo a 
+	color blanco
+	font-style italic
+	font-size 1rem
+	font-weight 400
+
+
+
+
+.miniaturas
+	display none
+
+
+
+
+/********************** CONT INICIO ***********************/
+
+.cont-inicio
+	text-align center
+	margin-top 30px
+.cont-inicio h1, .cont-proyectos h2
+	font-size 1.5rem
+	margin 0
+	color gris-claro
+.cont-inicio h3
+	font-size 1rem
+	line-height 1.5rem
+	color gris-claro
+	font-weight 300
+	margin-bottom 25px
+.cont-inicio span
+	font-size 1.5rem
+	text-align center
+	color gris-claro
+.cont-proyectos 
+	margin-top 30px 
+	padding-top 30px 
+	padding-bottom 50px
+	background gris-clarito
+	text-align center
+	a  
+		font-size 1rem
+		font-style italic
+		font-weight 400
+		color gris-oscuro
+.cont-proyectos figure 
+	width 100%
+	margin-top 30px
+	img
+		width 100%
+		height auto
+
+
+
+/********************** CULTURA ***********************/
+.cont-cultura
+	margin-top 50px
+	margin-bottom 50px
+	a 
+		text-decoration none
+	h2
+		text-align center
+		color gris-oscuro
+		font-weight 300
+		margin-bottom 20px
+.enlaces-cultura
+	width 100%
+	margin-bottom 15px
+	background gris-oscuro
+	box-shadow 0px 0px 2px 1px rgba(0,0,0,0.2)
+	transition all .5s ease-out
+	div 
+		width 100%
+		height 40px
+		background gris-oscuro
+		line-height 40px 
+		text-align center
+		h4
+			font-size 1rem
+			color blanco
+			font-weight 300
+			text-transform uppercase
+	figure 
+		width 100%
+		height 150px
+		overflow hidden
+		img
+			width auto
+			height 100%
+			opacity .3
+.enlaces-cultura:hover
+	background rojo-claro
+	box-shadow 0px 0px 20px 0px rgba(0,0,0,0.4)
+
+/********************** VIDEOS ***********************/
+
+.cont-videos
+	iframe
+		width 100%
+		height 100%
+		left 0
+		top 0 
+		position absolute
+	h2
+		text-align center
+		color gris-oscuro
+		font-weight 300
+		margin-bottom 20px
+.videos
+	height 0
+	overflow hidden
+	padding-bottom 56.25%
+	padding-top 30px 
+	position relative
+	margin-bottom 20px
+	transition all .5s
+	box-shadow 0px 0px 2px 1px rgba(0,0,0,0.2)
+.videos:hover
+	box-shadow 0px 0px 20px 0px rgba(0,0,0,0.4)
+.videos-recientes h5
+	width 80%
+	margin 0 auto
+	margin-bottom 20px
+	padding 10px 0
+	background gris-claro
+	font-size 17px
+	color blanco
+	text-align center
+	font-weight 100
+	text-transform uppercase
+
+.logo-youtube
+	text-align center
+	width 200px
+	margin 0 auto
+	figure
+		width 70px 
+		margin 0 auto
+		margin-bottom 10px
+		margin-top 50px
+		img
+			width 100%
+	a 
+		color gris-claro
+		font-size 1rem
+		font-style italic
+		font-weight 300
+
+
+/**********************MENSAJE ***********************/
+
+.cont-mensaje
+	width 100%
+	padding-bottom 50px
+	margin-top 50px
+	background gris-clarito
+	text-align right
+	padding-top 30px
+.btn-telefono
+	width 48%
+	height 50px
+	border-radius 5px
+	background blanco
+	display inline-block
+	box-shadow 0px 0px 17px -2px rgba(0,0,0,0.25)
+	position absolute
+	left 0px
+	text-align center
+	img
+		width 30px 
+		display inline-block
+		margin 0 auto
+		margin-top 10px
+.mensaje 
+	width 48%
+	height 50px
+	border-radius 5px 
+	overflow hidden
+	display inline-block
+	position relative
+	z-index 1000
+	box-shadow 0px 0px 17px -2px rgba(0,0,0,0.25)
+	transition width .1s ease-out, height .2s .2s ease-out
+	header
+		width 100%
+		height 60px 
+		background rojo-claro
+		transition all .6s
+		text-align center
+		overflow hidden
+		img
+			width 30px
+			height auto
+			display inline-block
+			text-align center
+			vertical-align top
+			margin-top 15px
+			margin-bottom 20px
+		p 
+			width 210px
+			display inline-block
+			text-align left
+			margin-left 15px
+			margin-top 15px
+			vertical-align top
+			color blanco
+	.cuerpo-mensaje
+		width 100% !important
+		height 300px !important
+		background blanco
+
+.mensaje-activo
+	width 100% !important
+	height 360px !important
+	header
+		background gris-oscuro
+		height 75px
+
+
+.redes
+	width 100%
+	border-radius 5px 
+	margin-top 30px
+	overflow hidden
+	box-shadow 0px 0px 17px -2px rgba(0,0,0,0.25)
+	header
+		width 95%
+		padding 20px 0px
+		padding-left 5%
+		background gris-claro
+		font-size 1rem
+		font-weight 300
+		text-transform uppercase
+		text-align left
+		color blanco
+	.cuerpo-redes
+		width 100%
+		background blanco
+		text-align center
+		padding-top 30px
+		section
+			display inline-block
+			width 130px
+			text-align left
+			margin-bottom 30px
+			div
+				width 20px 
+				height 20px
+				background gris-claro
+				display inline-block
+				vertical-align top
+				margin-right 10px
+			p 
+				display inline-block
+				vertical-align top
+				text-transform uppercase
+
+footer
+	width 100%
+	background gris-oscuro
+	div
+		font-size .7rem
+		color blanco
+	.logo-blanco
+		width 100%
+		height 80px
+		line-height 80px
+		border-bottom 1px solid blanco
+		img
+			width auto
+			height 50px
+			margin-top 15px
+	.dato-uno
+		width 58%
+		height 55px
+		padding-top 5px
+		line-height 1.2rem
+		display inline-block
+		vertical-align top
+		border-right 1px solid blanco
+	.dato-dos
+		width 40%
+		vertical-align top
+		display inline-block
+		.tel 
+			border-bottom 1px solid blanco
+			height 29px
+			line-height 29px
+			padding-left 5px
+		.correo
+			height 30px
+			line-height 30px
+			padding-left 5px
+	.reservados
+		height 40px
+		line-height 40px
+		text-align center
+		border-top 1px solid blanco
+
+@media screen and (min-width:650px)
+	/*** LINEA NEGRA ***/
+	.wrapt
+		max-width 700px
+
+	 
+	.bolsa-blog
+		width 70%
+	.contacto
+		width 10%
+	.contacto div
+		margin-right -55%
+
+
+
+
+
+	/*** LINEA BLANCA ***/
+
+	.barra-blanca
+		height 120px
+		transition all .5s ease-out
+	.cont-logo
+		width 100%
+		height 80px
+		padding-top 25px
+		position relative
+		transition all .5s ease-out
+		figure
+			height 70px
+			transition all .5s ease-out
+	.social
+		display none
+	.menu-icono
+		display none
+	nav
+		width 100%
+		height 50px
+		position relative
+		z-index 1000
+		right none
+		display block
+		box-shadow 0px 2px 6px -2px rgba(0,0,0,0.25)
+		border-radius 0
+		background blanco
+		margin-top 0
+		overflow hidden
+		text-transform uppercase
+		border-top 1px solid gris-clarito
+		ul 
+			width 100%
+		
+			li 
+				width auto
+				display inline-block
+				margin 0 10px
+				p
+					font-size .8rem
+					font-weight 300
+	.nav-activo
+		width 100%
+		height 50px
+	.bloque
+		width 100%
+		height 230px
+		
+	.wrapt
+		max-width 700px
+		
+
+	/********************** SLIDER ***********************/
+	#slider 
+		width 100%
+		top 140px
+		
+
+	.flechas
+		display none
+		
+
+	.elemento-slide 
+		width 100%
+		.texto-noticia
+			width 90%
+			margin-left 5%
+			margin-top -350px
+			position absolute
+			z-index 999
+		img
+			width 100%
+			height 350px
+		header 
+			width 250px
+			background rojo-transparente
+			text-align center
+			height 250px
+			padding-top 100px
+		
+
+	.elemento-slide  h2
+		width 80%
+		text-align left
+		
+	.descriptivo
+		width 75%
+		max-width 500px
+		margin-left 0
+		position absolute
+		margin-top -170px
+		text-align left
+		padding 0px 0px
+		line-height 40px
+	.descriptivo h3
+		width 72%
+		padding-right 20px
+		display inline-block
+		padding-left 5%
+		margin-top 13px
+		font-size 1rem
+		border-right 1px solid blanco
+
+	.rayita-horizontal
+		display none
+	.descriptivo a 
+		display inline-block
+		position absolute
+		top 50%
+		margin-top -20px
+		color blanco
+		font-style italic
+		font-size 1rem
+		font-weight 400
+		vertical-align top
+		left 100%
+		margin-left -14%
+	
+	.triangulito-gris
+		width 0
+		height 0
+		border-style solid
+		margin 0 auto
+		margin-top -10px
+		position relative 
+		z-index 1000
+		border-width 0 10px 10px 10px
+		border-color transparent transparent gris-clarito transparent
+
+
+	.bloque-gris
+		width 33.33%
+		height 150px
+		background gris-clarito
+		position absolute
+		transition all .4s ease-in-out
+
+	.miniaturas
+		display block
+		width 100%
+		height 150px
+		border-bottom 1px solid gris-clarito
+		font-size 0px
+		.miniatura
+			width 33.2%
+			height 90px
+			margin-top 30px
+			display inline-block
+			position relative
+			z-index 1000
+			vertical-align top
+			border-right 1px solid gris-clarito
+			&:last-child
+				border-right 0px
+				width 33.3%
+			section
+				width 200px
+				height 90px
+				margin 0 auto
+				div
+					width 120px
+					margin-left 10px
+					font-size 1rem
+					display inline-block
+					vertical-align top
+					strong
+						color gris-oscuro
+						margin-bottom 20px
+						line-height 21px
+					span
+						color gris-claro
+						font-weight 300
+				figure
+					width 70px 
+					height 70px
+					overflow hidden
+					display inline-block
+					vertical-align top
+					img
+						width auto
+						height 100%
+	
+	.posicion-uno
+		margin-left 0%
+	.posicion-dos
+		margin-left 33.3%
+	.posicion-tres
+		width 33.4%
+		margin-left 66.6%
+
+
+
+
+
+
+	/********************** CONT INICIO ***********************/
+
+	.cont-inicio
+		max-width 500px
+		margin-top 50px
+	.cont-inicio h1, .cont-proyectos h2
+		margin 0
+		color gris-claro
+	.cont-inicio h3
+		font-size 1.2rem !important
+		line-height 1.8rem !important
+		color gris-claro
+		margin-bottom 25px
+		
+
+
+
+
+	.cont-proyectos 
+		text-align center
+		padding-top 50px !important
+		section
+			width 45%
+			display inline-block
+			vertical-align top
+			text-align left
+	.cont-proyectos figure 
+		width 45% !important
+		display inline-block
+		vertical-align top
+		margin-top 0px !important
+	/********************** CULTURA ***********************/
+	.enlaces-cultura
+		width 30%
+		display inline-block
+		font-size 0px
+		margin-right 5%
+		text-align center
+		figure 
+			height 100px
+			img
+				width auto
+				height 100%
+				opacity .3
+	.ultimo-enlace
+		margin-right 0% !important
+	/********************** VIDEOS ***********************/
+		
+	.video-contenedor
+		width 30%
+		display inline-block
+		vertical-align top
+		margin-right 5%
+	.ultimo-video
+		margin-right 0%
+	.videos-recientes div
+		width 30%
+		height 148px
+		margin-right 5%
+		display inline-block
+		background gris-claro
+		vertical-align top
+		box-shadow 0px 0px 2px 1px rgba(0,0,0,0.2)
+		h5
+			margin-bottom 0%
+			margin-top 55px
+			width 100%
+	/**********************MENSAJE ***********************/
+
+	.btn-telefono
+		display none
+	.texto-cabecera-mensaje
+		width 80%
+		margin 0 auto
+	.mensaje 
+		width 100%
+		height 350px
+		header
+			height 100px 
+			background gris-oscuro
+			text-align left
+			img
+				text-align left
+				margin-top 30px
+				margin-bottom 20px
+			p 
+				width 300px
+				display inline-block
+				text-align left
+				margin-left 30px
+				margin-top 30px
+		.cuerpo-mensaje
+			width 100% !important
+			height 250px !important
+			background blanco
+
+	.mensaje-activo
+		width 100% !important
+		height 350px !important
+		header
+			background gris-oscuro
+			height 100px
+	
+
+	/********************** REDES ***********************/
+	.redes
+		font-size 0px
+		background gris-claro
+		header
+			width 24%
+			display inline-block
+			padding-left 3%
+			padding-right 3%
+			font-weight 300
+			line-height 22px
+			height 100%
+		.cuerpo-redes
+			width 70%
+			display inline-block
+			background blanco
+			text-align center
+			padding-top 30px
+			padding-bottom 0px
+			section
+				margin-bottom 30px
+	
+	
+	/********************** PIE DE PÁGINA ***********************/
+	footer
+		padding-top 30px
+	.logo-blanco
+		width 39% !important 
+		display inline-block
+		vertical-align top
+		border-bottom 0px solid blanco !important
+		border-right 1px solid blanco
+		img
+			width auto
+			height 80px
+			margin-top 15px
+	.dato-uno
+		width 28% !important
+		height 65px
+		padding-top 15px !important
+		padding-left 2%
+	.dato-dos
+		width 30% !important
+		vertical-align top
+		display inline-block
+		.tel 
+			border-bottom 1px solid blanco
+			height 50px
+			line-height 50px
+			padding-left 5px
+		.correo
+			height 30px
+			line-height 30px
+			padding-left 5px
+	.reservados
+		height 60px
+		line-height 60px
+		text-align center
+		border-top 1px solid blanco
+
+
+
+@media screen and (min-width:1000px)
+	
+	.wrapt
+		width 100%
+		max-width 970px
+	.contacto div
+		margin-right 0%
+		
+	nav
+		height 60px
+		ul
+			line-height 60px
+			height 60px
+			li 
+				height 60px
+				line-height 60px
+				margin 0px 20px !important
+				p
+					height 60px !important
+					line-height 60px !important
+	.bloque
+		height 240px
+	.cabecera-principal-pequena
+		margin-top -60px !important
+		nav 
+			height 40px
+			ul 
+				line-height 40px
+				height 40px
+				li 
+					height 40px 
+					line-height 40px
+					p
+						width 100%
+						height 40px !important
+						line-height 40px !important
+		.barra-blanca
+			height 70px
+			.cont-logo
+				height 50px
+				padding-top 10px
+				position relative
+				figure
+					height 50px
+					img
+						height 100%
+						width auto
+		
+	/********************** SLIDER ***********************/
+
+	#slider
+		font-size 0px !important
+	.elemento-slide 
+		width 78%
+		display inline-block
+		vertical-align top
+		font-size 0px
+		.texto-noticia
+			width 70%
+			margin-top -360px
+		figure
+			width 100%
+			height 360px
+			overflow hidden
+			padding 0px
+			margin 0px
+			img
+				width 100%
+				min-width 900px
+				height auto
+		header 
+			width 330px
+			height 280px
+			padding-top 80px
+		
+
+	.elemento-slide  h2
+		width 90%
+		font-size 2.5rem
+		line-height 3.5rem
+		font-weight 700
+		
+	.descriptivo
+		width 75%
+		max-width 600px
+		margin-left 0
+		position absolute
+		margin-top -170px
+		padding 0px 0px
+	.descriptivo h3
+		width 72%
+		font-weight 300
+		font-size 17px
+		border-right 1px solid blanco
+	.descriptivo a 
+		font-size 17px
+		font-weight 300
+		vertical-align top
+	.triangulito-gris
+		width 0
+		height 0
+		border-style solid
+		margin 0 auto
+		margin-top 50px
+		margin-left -20px
+		position relative 
+		z-index 1000
+		border-width: 10px 20px 10px 0;
+		border-color: transparent gris-clarito transparent transparent;
+
+	.bloque-gris
+		width 22%
+		display inline-block
+		vertical-align top
+		height 120px
+		margin-top 0
+	.miniaturas
+		width 22%
+		display inline-block !important
+		vertical-align top
+		height 100%
+		border-bottom 1px solid gris-clarito !important
+		font-size 0px
+		.miniatura
+			width 100%
+			height 119px
+			margin-top 0px
+			border-right 0px solid gris-clarito
+			border-bottom 1px solid gris-clarito
+			cursor pointer
+			transition all .2s
+			&:last-child
+				border-right 0px
+				width 100%
+				border-bottom 1px solid transparent !important
+			strong
+				transition all .2s
+		.miniatura section
+			margin 15px auto
+		.miniatura:hover
+			background transparent
+			strong
+				color rojo-claro !important
+		
+
+	.posicion-uno
+		margin-top 0px
+		margin-left 0% !important
+	.posicion-dos
+		margin-top 120px
+		margin-left 0% !important
+	.posicion-tres
+		margin-top 240px
+		margin-left 0% !important
+
+	/********************** CONT INICIO ***********************/
+
+	.cont-inicio
+		max-width 600px !important
+		margin-bottom 50px
+	.cont-inicio h1, .cont-proyectos h2
+		margin 0
+		color gris-claro
+		font-size 2.5rem
+	.cont-inicio h3
+		font-size 1.5rem !important
+		line-height 2.2rem !important
+		color gris-claro
+		margin-top 15px
+		margin-bottom 50px
+
+
+
+	/********************** CONT PROYECTOS ***********************/
+	.cont-proyectos section
+		width 35%
+		padding-top 100px
+		h2
+			margin-bottom 15px
+	.cont-proyectos figure 
+		width 55% !important
+	
+	/********************** CULTURA ***********************/
+	.enlaces-cultura
+		width 30%
+		display inline-block
+		font-size 0px
+		margin-right 5%
+		text-align center
+		figure 
+			height 120px
+			img
+				width 100%
+				height auto
+	.ultimo-enlace
+		margin-right 0% !important
+	/********************** VIDEOS ***********************/
+		
+	.video-contenedor
+		width 32%
+		display inline-block
+		vertical-align top
+		margin-right 2%
+	.ultimo-video
+		margin-right 0%
+	.videos-recientes div
+		width 32%
+		height 204px
+		margin-right 2%
+		box-shadow 0px 0px 2px 1px rgba(0,0,0,0.2)
+		h5
+			margin-bottom 0%
+			margin-top 80px
+			width 100%
+	
+	/********************** REDES ***********************/
+	.cuerpo-redes div 
+		width 80%
+		margin 0 auto
+	.cuerpo-redes section
+		margin-right 50px
+
+	
+

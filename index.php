@@ -9,7 +9,7 @@
 
 
 	<section class="elemento-slide elemento-uno">
-		<figure><img src="img/equipo-nuvoil.jpg" alt=""></figure>
+		<figure><img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt=""></figure>
 		<section class="texto-noticia">
 			<header class="titulo-noticia">
 				<h2>Titulo de la noticia de dos líneas </h2>	
@@ -30,7 +30,7 @@
 		<article class="miniatura miniatura-uno">
 			<section>
 				<figure>
-					<img src="img/equipo-nuvoil.jpg" alt="">
+					<img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt="">
 				</figure>
 				
 				<div>
@@ -42,7 +42,7 @@
 		<article class="miniatura miniatura-dos">
 			<section>
 				<figure>
-					<img src="img/equipo-nuvoil.jpg" alt="">
+					<img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt="">
 				</figure>
 				
 				<div>
@@ -54,7 +54,7 @@
 		<article class="miniatura miniatura-tres">
 			<section>
 				<figure>
-					<img src="img/equipo-nuvoil.jpg" alt="">
+					<img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt="">
 				</figure>
 				
 				<div>
@@ -92,7 +92,7 @@
 			<p>nuvoil somos una empresa mexicana que desde nuestros inicios en 1997, hemos destacado por nuestro servicio de compresión de gas onshore y offshore, tratamiento de hidrocarburos y la construcción de plantas industriales además de su mantenimiento.</p>
 			<a href="">ver más</a>
 		</section>
-		<figure><img src="img/proyectos.jpg" alt=""></figure>
+		<figure><img src="<?php bloginfo(template_directory) ?>/img/proyectos.jpg" alt=""></figure>
 	</article>
 </article>
 
@@ -102,19 +102,19 @@
 	<article class="wrapt">
 		<h2>Nuestra cultura</h2>
 		<a href=""><section class="enlaces-cultura">
-			<figure><img src="img/equipo-nuvoil.jpg" alt=""></figure>
+			<figure><img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt=""></figure>
 			<div>
 				<h4>nuestros proyectos</h4>
 			</div>
 		</section></a>
 		<a href=""><section class="enlaces-cultura">
-			<figure><img src="img/equipo-nuvoil.jpg" alt=""></figure>
+			<figure><img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt=""></figure>
 			<div>
 				<h4>nuestros proyectos</h4>
 			</div>
 		</section></a>
 		<a href=""><section class="enlaces-cultura ultimo-enlace">
-			<figure><img src="img/equipo-nuvoil.jpg" alt=""></figure>
+			<figure><img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt=""></figure>
 			<div>
 				<h4>nuestros proyectos</h4>
 			</div>
@@ -146,7 +146,7 @@
 
 		</article>
 		<section class="logo-youtube">
-			<figure><img src="img/logo-youtube.svg" alt=""></figure>
+			<figure><img src="<?php bloginfo(template_directory) ?>/img/logo-youtube.svg" alt=""></figure>
 			<a href="">Visita nuestro canal</a>
 		</section>
 		

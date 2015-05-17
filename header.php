@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php bloginfo(the_tile); ?></title>
-	<link rel="stylesheet" href="<?php bloginfo(template_directory) ?>/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<?php wp_head(); ?>	
 </head>
 <body>
 
@@ -39,7 +39,7 @@
 		<section class="barra-blanca">
 			<div class="wrapt">
 				<div class="cont-logo">
-					<figure><img src="<?php bloginfo(template_directory) ?>/img/logo-nuvoil.svg" alt="" id="logo"></figure>
+					<figure><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo(template_directory) ?>/img/logo-nuvoil.svg" alt="" id="logo"></a></figure>
 				</div>
 				<div class="social"></div>
 				<div class="menu-icono">

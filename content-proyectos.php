@@ -8,11 +8,10 @@
 <article class="cont-inicio wrapt">
 	<?php
 			// Get post with ID 7, in a OBJECT, in RAW format
-			$acerca = get_post(7, OBJECT, raw);
+			$acerca = get_post(82, OBJECT, raw);
 	?>
 	<h1><?php echo $acerca->post_title; ?></h1>
 	<h3><?php echo $acerca->post_content; ?></h3>
-	<span>....</span>
 </article>
 
 

@@ -257,24 +257,47 @@ nav
 	font-size 1.5rem
 	text-align center
 	color gris-claro
-.cont-proyectos 
+.cont-proyectos:nth-child(odd) 
 	margin-top 30px 
 	padding-top 30px 
-	padding-bottom 50px
-	background gris-clarito
+	background white
 	text-align center
+	article
+		border-bottom 3px solid gris-clarito	
+		padding-bottom 50px
 	a  
 		font-size 1rem
 		font-style italic
 		font-weight 400
 		color gris-oscuro
-.cont-proyectos figure 
-	width 100%
-	margin-top 30px
-	img
+	figure 
 		width 100%
-		height auto
-
+		margin-top 30px
+		img
+			width 100%
+			height auto
+.cont-proyectos:nth-child(even) 
+	margin-top 30px 
+	padding-top 30px 
+	background white
+	text-align center
+	article
+		border-bottom 3px solid gris-clarito	
+		padding-bottom 50px
+	a  
+		font-size 1rem
+		font-style italic
+		font-weight 400
+		color gris-oscuro
+	figure 
+		width 100%
+		margin-top 30px
+		img
+			width 100%
+			height auto
+.cont-proyectos:last-child
+	article
+		border-bottom none
 
 
 /**********************MENSAJE ***********************/
@@ -703,13 +726,23 @@ footer
 
 
 	/********************** CONT PROYECTOS ***********************/
-	.cont-proyectos section
-		width 35%
-		padding-top 100px
+	.cont-proyectos:nth-child(odd)
+		section
+			width 35%
+			padding-top 100px
 		h2
 			margin-bottom 15px
-	.cont-proyectos figure 
-		width 55% !important
+		figure 
+			width 55% !important
+	.cont-proyectos:nth-child(even)
+		section
+			width 35%
+			padding-top 100px
+			float right
+		h2
+			margin-bottom 15px
+		figure 
+			width 55% !important
 	
 	
 	/********************** REDES ***********************/

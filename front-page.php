@@ -98,7 +98,7 @@
 				<section>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>">ver más</a>
+					<a href="/category/proyectos">ver más</a>
 				</section>
 				<figure><?php the_post_thumbnail(); ?></figure>
 			</article>

@@ -26,8 +26,8 @@
 			<article class="wrapt">
 				<section>
 					<h2><?php the_title(); ?></h2>
-					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>">ver más</a>
+					<p><?php the_content(); ?></p>
+					<!-- <a href="<?php the_permalink(); ?>">ver más</a> -->
 				</section>
 				<figure><?php the_post_thumbnail(); ?></figure>
 			</article>

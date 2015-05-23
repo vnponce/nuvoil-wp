@@ -30,3 +30,15 @@ function nuvoilWP_setup(){
 }
 
 add_action('after_setup_theme', 'nuvoilWP_setup');
+
+// Add our widget location
+function nuvoilWidgetInit(){
+
+	register_sidebar( array(
+			'name' => 'Sidebar Noticias Interior',
+			'id'   => 'sidebar_notint'
+		));
+
+}
+
+add_action('widgets_init', 'nuvoilWidgetInit');

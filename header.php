@@ -10,6 +10,10 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/pages.css">
 	<?php } elseif ( is_category( array('proyectos') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/proyectos.css">
+	<?php } elseif ( is_category( array('noticias') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias.css">
+	<?php } elseif ( is_single() ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-int.css">
 	<?php } ?>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>	

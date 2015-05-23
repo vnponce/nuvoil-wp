@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- ********************* Contenedor Bolsa ********************* -->
+<!-- ********************* IMAGEN PRINCIPAL ********************* -->
 
 <figure class="slider wrapt">
 	<img src="http://nuvoil.app/wp-content/themes/nuvoil/img/equipo-nuvoil.jpg">

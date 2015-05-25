@@ -8,10 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/inicio.css">
 	<?php } elseif ( is_page( array('bolsa-de-trabajo') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/pages.css">
+	<?php } elseif ( is_page( array('contacto') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/contacto.css">
+	<?php } elseif ( is_page( array('sgi') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/sgi.css">
 	<?php } elseif ( is_category( array('proyectos') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/proyectos.css">
 	<?php } elseif ( is_category( array('noticias') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias.css">
+	<?php } elseif ( is_home() ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-gen.css">
 	<?php } elseif ( is_single() ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-int.css">
 	<?php } ?>

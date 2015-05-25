@@ -35,8 +35,8 @@ add_action('after_setup_theme', 'nuvoilWP_setup');
 function nuvoilWidgetInit(){
 
 	register_sidebar( array(
-			'name' => 'Sidebar Noticias Interior',
-			'id'   => 'sidebar_notint'
+			'name' => 'Sidebar Twitter',
+			'id'   => 'sidebar_twitter'
 		));
 
 }

@@ -4,20 +4,73 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php bloginfo(the_tile); ?></title>
+	<!-- Condiciones -->
+	<!-- Pagina principal -->
 	<?php if ( is_front_page() ) {?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/inicio.css">
+	<!-- Pagina bolsa de trabajo -->
 	<?php } elseif ( is_page( array('bolsa-de-trabajo') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/pages.css">
+	<!-- Pagina contacto -->
 	<?php } elseif ( is_page( array('contacto') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/contacto.css">
-	<?php } elseif ( is_page( array('sgi') ) ) { ?>
+	<!-- Pagina sgi -->
+	<?php } elseif ( is_page( array('sgi', 'nuestras-certificaciones', 'seguridad') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/sgi.css">
+	<!-- Pagina aceraca de nuvoil -->
+	<?php } elseif ( is_page( array('acerca-de-nuvoil') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/acerca.css">
+	<!-- Pagina capital -->
+	<?php } elseif ( is_page( array('capital') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/capital.css">
+	<!-- Pagina gobierno -->
+	<?php } elseif ( is_page( array('gobierno') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/gobierno.css">
+	<!-- Pagina Historia -->
+	<?php } elseif ( is_page( array('historia') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/historia.css">
+	<!-- Pagina Historia -->
+	<?php } elseif ( is_page( array('responsabilidad-social-corporativa') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/rsc.css">
+	<!-- Paginas Marcas -->
+	<?php } elseif ( is_page( 
+		array(
+			'compresion-de-gas-offshore',
+			'arrendamiento-de-maquinaria',
+			'servicio-boca-de-pozo',
+			'aceitemex',
+			'rancho',
+			'verde-balam',
+			'exsen'
+		) ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/marcas.css">
+	<?php } elseif ( is_page( 
+		array(
+			'compresion-de-gas-natural',
+			'acondicionamiento-y-tratamiento',
+			'sistema-de-levantamiento',
+			'construccion-de-plantas',
+			'mantenimiento-a-instalaciones',
+			'proyectos-integrados',
+			'suministro-de-equipos',
+			'telemetria',
+			'ingenieria'
+		) ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/servicios.css">
+
+
+	<!-- Categoria proyectos -->
 	<?php } elseif ( is_category( array('proyectos') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/proyectos.css">
+	<!-- Categoria noticias -->
 	<?php } elseif ( is_category( array('noticias') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias.css">
+
+
+	<!-- Es blog -->
 	<?php } elseif ( is_home() ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-gen.css">
+	<!-- Es post -->
 	<?php } elseif ( is_single() ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-int.css">
 	<?php } ?>
@@ -28,6 +81,7 @@
 
 <!-- ********************* ABRE CABECERA PRINCIPAL ********************* -->	
 	<header class="cabecera-principal">
+		
 		<section class="barra-negra">
 			<div class="wrapt">
 				<section class="idioma">
@@ -42,8 +96,12 @@
 				</section>
 				<section class="bolsa-blog">
 					<ul>
+						<li><a href="">Proveedores</a></li>
+						<li class="rojo en-desktop">|</li>
+						<li><a href="">Telemetría</a></li>
+						<li class="rojo en-desktop">|</li>
 						<li><a href="">Bolsa de trabajo</a></li>
-						<li class="rojo">|</li>
+						<li class="rojo en-desktop">|</li>
 						<li><a href="">Blog</a></li>
 					</ul>
 				</section>
@@ -55,18 +113,27 @@
 
 		<section class="barra-blanca">
 			<div class="wrapt">
+				
 				<div class="cont-logo">
 					<figure><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo(template_directory) ?>/img/logo-nuvoil.svg" alt="" id="logo"></a></figure>
 				</div>
-				<div class="social"></div>
-				<div class="menu-icono">
-					<span></span>
-					<div>menu</div>
+				
+				<div class="social">
+					<a href=""><span class="icon-facebook"></span></a>
+					<a href=""><span class="icon-twitter"></span></a>
+					<a href=""><span class="icon-linkedin"></span></a>
+					<a href=""><span class="icon-gplus"></span></a>
+					<a href=""><span class="icon-instagram"></span></a>
+					<a href=""><span class="icon-youtube"></span></a>
 				</div>
 				
-			</div>
-			<nav>
-					<ul>
+				<div class="menu-icono">
+					<div>
+						<span class="rayita"></span>
+						<span class="rayita"></span>
+						<span class="cerrar-nav">x</span>	
+						<nav class="navegacion-movil">
+							<ul>
 						<?php 
 							$args = array(
 								'theme_location' => 'primary'
@@ -81,9 +148,15 @@
 						<li><a href=""><p>acerca de nuvoil</p></a></li>
 						<li><a href=""><p>noticias</p></a></li>
 -->
-					</ul>
-				</nav>
+							</ul>
+						</nav>
+					</div>
+					<div class="menu-texto">menu</div>
+				</div>
+			</div>
 		</section>
-		
+
 	</header>
-<div class="bloque"></div>
+	
+	<div class="bloque"></div>
+<!-- ********************* CIERRA CABECERA PRINCIPAL ********************* -->	

@@ -42,3 +42,23 @@ function nuvoilWidgetInit(){
 }
 
 add_action('widgets_init', 'nuvoilWidgetInit');
+
+// Custom function
+	// Identifica la página actual
+	function itsme_page($me){
+		if ( is_page( array($me) ) ) {
+			return 'seleccionado';
+		}
+		else{
+			return 'false';
+		}
+	}
+	// Identifica la categoría actual
+	function itsme_cat($me){
+		if ( is_category( array($me) ) ) {
+			return 'seleccionado';
+		}
+		else{
+			return 'false';
+		}
+	}

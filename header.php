@@ -32,6 +32,9 @@
 	<!-- Pagina Historia -->
 	<?php } elseif ( is_page( array('responsabilidad-social-corporativa') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/rsc.css">
+	<!-- Pagina Proyectos -->
+	<?php } elseif ( is_page( array('proyectos') ) ) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/proyectos.css">
 	<!-- Paginas Marcas -->
 	<?php } elseif ( is_page( 
 		array(
@@ -59,8 +62,8 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/servicios.css">
 
 
-	<!-- Categoria proyectos -->
-	<?php } elseif ( is_category( array('proyectos') ) ) { ?>
+	<!-- Categoria proyectos (ESTE NO DEBE ESTAR)-->
+	<?php } elseif ( is_category( array('proyectos-2') ) ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/proyectos.css">
 	<!-- Categoria noticias -->
 	<?php } elseif ( is_category( array('noticias') ) ) { ?>
@@ -73,6 +76,20 @@
 	<!-- Es post -->
 	<?php } elseif ( is_single() ) { ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-int.css">
+	<!-- Es categoría de blog -->
+	<?php } elseif ( is_category( 
+					array(
+						'capital-humano',
+						'gobierno-corporativo',
+						'rsc',
+						'sgi',
+						'seguridad',
+						'comunidad-y-medio-ambiente',
+						'proyectos'
+						) 
+					 ) 
+					) { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylus/noticias-gen.css">
 	<?php } ?>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>	
@@ -100,7 +117,7 @@
 						<li class="rojo en-desktop">|</li>
 						<li><a href="">Telemetría</a></li>
 						<li class="rojo en-desktop">|</li>
-						<li><a href="">Bolsa de trabajo</a></li>
+						<li><a href="<?php get_site_url() ?>/bolsa-de-trabajo">Bolsa de trabajo</a></li>
 						<li class="rojo en-desktop">|</li>
 						<li><a href="">Blog</a></li>
 					</ul>

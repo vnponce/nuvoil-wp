@@ -23,7 +23,7 @@
 			while($inicio->have_posts()) : $inicio->the_post(); 
 	?>
 		<article class="cont-proyectos">
-			<article class="wrapt">
+			<article class="wrapt proyecto">
 				<section>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_content(); ?></p>

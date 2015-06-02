@@ -6,38 +6,113 @@
 		<div class="flecha flecha-izq"></div>
 		<div class="flecha flecha-der"></div>
 	</div>
+	<div class="contenedor-padre-slider">
+	<div class="contenedor-slider">
 
+	<?php 
+
+function the_excerpt_max_charlength($charlength) {
+	$excerpt = get_the_excerpt();
+	$charlength++;
+
+	if ( mb_strlen( $excerpt ) > $charlength ) {
+		$subex = mb_substr( $excerpt, 0, $charlength - 5 );
+		$exwords = explode( ' ', $subex );
+		$excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+		if ( $excut < 0 ) {
+			echo mb_substr( $subex, 0, $excut );
+		} else {
+			echo $subex;
+		}
+		echo '[...]';
+	} else {
+		echo $excerpt;
+	}
+}
+
+// array para clase 
+$clases = array('elemento-uno', 'elemento-dos', 'elemento-tres');
+		$query = array(
+				'cat' => 5,
+				'posts_per_page' => 3,
+				'post_type' => 'post'
+			);
+		$inicio = new WP_Query($query);
+		$c = 0;
+		if($inicio->have_posts()) : 
+			while($inicio->have_posts()) : $inicio->the_post(); 
+	?>
 	
-		<section class="elemento-slide elemento-uno">
-			<figure><img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt=""></figure>
+		<section class="elemento-slide <?php echo $clases[$c] ?>">
+			<figure><?php the_post_thumbnail(); ?></figure>
 			<section class="texto-noticia">
 				<header class="titulo-noticia">
-					<h2>Titulo de la noticia de dos líneas </h2>	
+					<h2><?php the_title(); ?></h2>	
 				</header>
 				<section class="descriptivo">
-					<h3>Acompañado de una pequeña descripción de la noticia</h3>
+					<h3><?php echo the_excerpt_max_charlength(67); ?></h3>
 					<div class="rayita-horizontal"></div>
-					<a href="">Ver más</a>
+					<a href="<?php the_permalink(); ?>">Ver más</a>
 				</section>
 			</section>
 		</section>
+	<?php 
+	$c += 1;
+		endwhile;
 
+		else : 
+
+			echo '<p>No post para mostrar</p>';
+
+		endif;
+
+	?>
+	</div>
+	</div>
 	<section class="miniaturas">
 		<div class="bloque-gris">
 			<div class="triangulito-gris"></div>
 		</div>
-		<article class="miniatura miniatura-uno">
+
+<?php // array para clase 
+$miniclases = array('miniatura-uno', 'miniatura-dos', 'miniatura-tres');
+/*		$query = array(
+				'cat' => 5,
+				'posts_per_page' => 2,
+				'post_type' => 'post'
+			);
+*/
+		$inicio = new WP_Query($query);
+		$c = 0;
+		if($inicio->have_posts()) : 
+			while($inicio->have_posts()) : $inicio->the_post(); 
+	?>
+
+
+		<article class="miniatura <?php echo $miniclases[$c]?>">
 			<section>
 				<figure>
-					<img src="<?php bloginfo(template_directory) ?>/img/equipo-nuvoil.jpg" alt="">
+					<?php the_post_thumbnail(); ?>
 				</figure>
 				
 				<div>
-					<strong>Título de mientras de la noticia</strong><br>
-					<span>Breve descripción de dos líneas o tres líneas</span>
+					<strong><?php the_title(); ?></strong><br>
+					<span><?php echo the_excerpt_max_charlength(40); ?></span>
 				</div>
 			</section>
 		</article>
+	<?php 
+	$c += 1;
+		endwhile;
+
+		else : 
+
+			echo '<p>No post para mostrar</p>';
+
+		endif;
+
+	?>
+<!--
 		<article class="miniatura miniatura-dos">
 			<section>
 				<figure>
@@ -62,8 +137,8 @@
 				</div>
 			</section>
 		</article>
+-->
 	</section>
-
 
 </article>
 <!-- ********************* CIERRA SLIDE ********************* -->
@@ -88,10 +163,9 @@
 
 
 <!-- ********************* ARTICULO PROYECTOS ********************* -->
-	<?php 
-		$inicio = new WP_Query('cat=5');
-		if($inicio->have_posts()) : 
-			while($inicio->have_posts()) : $inicio->the_post(); 
+	<?php
+			// Get post with ID 7, in a OBJECT, in RAW format
+			$proyecto = get_post(280, OBJECT, raw);
 	?>
 		<article class="cont-proyectos">
 			<article class="wrapt">
@@ -103,17 +177,6 @@
 				<figure><?php the_post_thumbnail(); ?></figure>
 			</article>
 		</article>
-
-	<?php 
-		endwhile;
-
-		else : 
-
-			echo '<p>No post para mostrar</p>';
-
-		endif;
-
-	?>
 
 <!-- ********************* ARTICULO CULTURA ********************* -->
 <article class="cont-cultura">
